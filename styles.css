@@ -2,6 +2,7 @@ h1 {
   font-family: "UNDERRATED Ultra Bold";
   font-style: normal;
   font-weight: normal;
+  color: red;
   src: local("UNDERRATED Ultra Bold"),
     url("UNDERRATED-UltraBold Personal Use.woff") format("woff");
 }
