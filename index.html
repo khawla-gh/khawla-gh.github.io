@@ -12,18 +12,55 @@
                 
 </head>
 
-<body>
+<body id="grain">
+    <div class="row " id="nav"></div>
     <div class="header">
-        <div class="row" id="nav" style="min-height: 70px;"></div>
         <div class="row" style="justify-content: center;">
-            <div class="col-5">
-                <h0>khawla</h0>
-                <h0 class="alt">ibrahim</h0>
-                <h5>uxui designer · developer · illustrator</h5>
+            <div class="col-5" >
+                <h1>Khawla</h1>
+                <h1 class="alt" >Ibrahim</h1>
+                <h6 class="title">ux ui designer · web app developer · illustrator</h6>            
+                <div class="portfolio">
+                    <h6>portfolio</h6><p>2023/2024</p>
+                    <div class="btm-border"></div>
+                </div>      
             </div>
         </div>
+        <div class="gradient-container" >
+            <div class="blush1"></div>
+        <div class="blush2"></div>
+        </div>
+        <div class="spline">
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@0.9.518/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/dYhSDbPcOH1w9SZd/scene.splinecode"></spline-viewer>
+        </div>
     </div>
+    
+        
+        <div class="body">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 317">
+                <path fill="rgb(22, 22, 22)" fill-opacity="1" d="M0,128L24,128C48,128,96,128,144,154.7C192,181,240,235,288,261.3C336,288,384,288,432,272C480,256,528,224,576,213.3C624,203,672,213,720,197.3C768,181,816,139,864,138.7C912,139,960,181,1008,208C1056,235,1104,245,1152,213.3C1200,181,1248,107,1296,90.7C1344,75,1392,117,1416,138.7L1440,160L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z"></path>
+              </svg>
+              <div class="content">ffffff</div>
+            
+        </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="grained.js"></script>
+<script>
+var options = {
+  "animate": true,
+  "patternWidth": 220,
+  "patternHeight": 260,
+  "grainOpacity": 0.17,
+  "grainDensity": 1,
+  "grainWidth": 1.16,
+  "grainHeight": 1
+}
+
+grained("#grain", options);
+
+</script>
+
 </html>
