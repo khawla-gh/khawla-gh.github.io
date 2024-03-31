@@ -1,14 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-$text-color: rgb(0, 0, 0);
+$text-color: black;
 $bg-color: rgb(248, 248, 248);
+$pink: rgb(255, 0, 85);
 
 html,
 body {
   font-family: "Poppins";
   overflow-x: hidden;
   box-sizing: border-box;
-  background-color: $bg-color;
+  background-image: url(/img/grain.gif);
+}
+.sss {
+  height: 1000px;
+}
+
+.spacer {
+  height: 200px;
+}
+.cursor {
+  position: fixed;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  pointer-events: none;
+  left: -100px;
+  top: 50%;
+  mix-blend-mode: difference;
+  background-color: transparent;
+  border: 1.5px solid white;
+  z-index: 1000;
+  height: 50px;
+  width: 50px;
+  transition: all 140ms ease-out;
 }
 
 #nav {
@@ -38,7 +61,7 @@ body {
       float: right;
       a {
         display: block;
-        color: rgb(0, 0, 0);
+        color: $text-color;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -177,7 +200,7 @@ body {
   }
 
   #btm-border {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid $text-color;
     left: 0px;
     z-index: 10;
   }
@@ -189,7 +212,6 @@ body {
 }
 .body {
   width: 100%;
-  height: 100vh;
   position: relative;
   overflow: hidden;
 
@@ -198,11 +220,69 @@ body {
   }
 }
 
+.divider {
+  background: linear-gradient($text-color, rgba($bg-color, 0.1));
+  height: 200px;
+  width: 100vw;
+}
+
 .content {
-  background-color: rgb(22, 22, 22);
+  background-color: $text-color;
   color: white;
   width: 100%;
-  height: 100vh;
+  display: flex;
+  z-index: 5;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    text-align: center;
+    max-width: 640px;
+    letter-spacing: 1.5px;
+    font-weight: 200;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #about-me {
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      max-width: 450px;
+
+      img {
+        padding: 16px;
+        scale: 1.2;
+      }
+    }
+  }
+
+  #works {
+    #works-title {
+      -webkit-text-stroke-color: black !important;
+    }
+  }
+
+  .outlined-title {
+    padding-bottom: 30px;
+    font-size: 50px;
+    text-align: center;
+    font-family: "underrated", sans-serif;
+    align-self: center;
+
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+  }
 }
 
 .row {
@@ -219,13 +299,15 @@ body {
 .spline {
   position: absolute;
   width: 100vw;
-  top: 400px;
+  max-height: 80vh;
+  background-clip: content-box;
+  top: 450px;
   mix-blend-mode: darken;
   overflow: none !important;
 }
 
 .btn-primary {
-  background-color: rgb(255, 0, 85) !important;
+  background-color: $pink !important;
   border: none !important;
   border-radius: 0 !important;
   margin: 0 !important;
@@ -246,9 +328,83 @@ a {
 
 .footer {
   width: 100vw;
-  height: 30vh;
   position: absolute;
-  bottom: 0;
-  background-color: rgb(31, 31, 31);
-  z-index: 20;
+  bottom: 0px !important;
+  z-index: 200;
+  background: radial-gradient(
+    ellipse at bottom,
+    $pink,
+    $text-color,
+    $text-color
+  );
+
+  p {
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    width: 60%;
+  }
+
+  .sparkles2 {
+    position: absolute;
+    width: 100vw;
+    z-index: 20;
+    height: 50vh;
+
+    #sp1 {
+      position: relative;
+      left: 20%;
+      top: 30%;
+    }
+
+    #sp2 {
+      position: relative;
+      left: 70%;
+      top: -10%;
+      scale: 0.3;
+    }
+    #dt1 {
+      scale: 1.2;
+      position: relative;
+      left: 25%;
+      top: 20%;
+    }
+
+    #dt2 {
+      scale: 3;
+      position: relative;
+      left: 65%;
+      top: 60%;
+    }
+
+    #dt3 {
+      scale: 1;
+      position: relative;
+      left: 65%;
+      top: 70%;
+    }
+    #dt4 {
+      scale: 2.2;
+      position: relative;
+    }
+  }
+
+  .contacts {
+    font-family: "underrated", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+
+    h3 {
+      color: #ff0055;
+      margin: -25px;
+      font-size: 40px;
+    }
+
+    #con1,
+    #con3 {
+      color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: #ff0055;
+    }
+  }
 }
